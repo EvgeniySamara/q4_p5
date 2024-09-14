@@ -4,8 +4,11 @@
 # далее). Реализацию напишите двумя способами: функция-генератор и
 # генераторное выражение.
 
+def gensquare(n):
+    for i in range(1, N + 1):
+        yield i**2
+
 N = 10
 l1 = (i**2 for i in range(1,N+1))
-l2 = [i**2 for i in range(1,N+1)]
 print(*l1)
-print(*l2)
+print(*gensquare(N))
